@@ -1,0 +1,12 @@
+page-mine {
+    .sliderBar{
+        height:50px;
+        // white-space 属性设置如何处理元素内的空白,nowrap规定文本不换行
+        white-space:nowrap;
+    }
+
+    .sliderBar span{
+        font-size:30px;
+        padding: 0 10px;
+    }
+}

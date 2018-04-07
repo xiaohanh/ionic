@@ -1,0 +1,45 @@
+<ion-menu [content]="mycontent">
+    <ion-content>
+      <ion-list>
+          <h1  class="aa">个人中心</h1>
+         
+
+          <ion-item>
+              <ion-label>昵称</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label fixed>地址</ion-label>
+              <ion-input type="url"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label floating>邮箱</ion-label>
+              <ion-input type="email"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label>消息中心</ion-label>
+              <ion-toggle></ion-toggle>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label>会员中心</ion-label>
+              <ion-checkbox></ion-checkbox>
+            </ion-item>
+      </ion-list>
+      <button ion-button round  full  menuClose class="close">关闭面板</button>
+    </ion-content>
+  </ion-menu>
+  <ion-nav #mycontent [root]="rootPage"></ion-nav> 
+     
+  
+    
+    
+
+
+
+
+
+
