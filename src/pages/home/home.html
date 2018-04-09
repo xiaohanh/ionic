@@ -1,204 +1,43 @@
-<ion-header no-border>
-  <ion-navbar color="yel" >
-     <button ion-button icon-only menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-     
-      <ion-title> <img src="assets/imgs/logo.png"></ion-title>
-  </ion-navbar>   
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
 </ion-header>
 
-<ion-content class="con">
+<ion-content  padding class="con">
+  <div class="image">
+    <img src="../../assets/imgs/qie.jpg">
+  </div>
+  <ion-list class="list">
 
-    <!-- 滑动组件ion-slide 轮播图   -->
-
-      <ion-slides class="slide" loop="true">
-          <ion-slide>
-                    <img src="assets/imgs/loop.png">
-          </ion-slide> 
-       <ion-slide>
-              <img src="assets/imgs/loop.png">
-          </ion-slide>
-    </ion-slides>
-
-
-    <!-- segment分段组件 -->
-
-    <div padding>
-      <ion-segment [(ngModel)]="search" color="yel">
-        <ion-segment-button value="infor">
-         找信息
-        </ion-segment-button>
-        <ion-segment-button value="service">
-          找服务
-        </ion-segment-button>
-      </ion-segment>
-    </div>
-    
-    <div [ngSwitch]="search">
-     
-        <ion-list *ngSwitchCase="'infor'">
-            <ion-slides class="slide" loop="true">
-                <ion-slide>
-                    <ion-grid>
-                        <ion-row>
-                            <ion-col >
-                              <img src="assets/imgs/money.png" class="money">
-                              <p>资产包转让</p>    
-                            </ion-col>
-                            <ion-col >
-                                <img src="assets/imgs/money2.png" class="money">
-                                <p>债权转让</p>    
-                           </ion-col>
-                           <ion-col  >
-                              <img src="assets/imgs/money3.png"  class="money">
-                              <p>固产转让</p>    
-                            </ion-col>
-                            <ion-col>
-                                <img src="assets/imgs/money4.png"  class="money">
-                                <p>商业保理</p>    
-                            </ion-col>
-   
-                        </ion-row>
-                        <ion-row>
-                            <ion-col >
-                              <img src="assets/imgs/money5.png" class="money">
-                              <p>典当担保</p>    
-                            </ion-col>
-                            <ion-col >
-                                <img src="assets/imgs/money6.png" class="money">
-                                <p>融资借贷</p>    
-                           </ion-col>
-                           <ion-col  >
-                              <img src="assets/imgs/money3.png"  class="money">
-                              <p>悬赏信息</p>    
-                            </ion-col>
-                            <ion-col>
-                                <img src="assets/imgs/search2.png"  class="money">
-                                <p>尽职调查</p>    
-                            </ion-col>
-   
-                        </ion-row>
-    
-                     </ion-grid>
-                </ion-slide> 
-                <ion-slide>
-                  <ion-grid>
-                    <ion-row>
-                        <ion-col >
-                          <img src="assets/imgs/money.png" class="money">
-                          <p>资产求购</p>    
-                        </ion-col>
-                        <ion-col >
-                            <img src="assets/imgs/money2.png" class="money">
-                            <p>委外催收</p>    
-                       </ion-col>
-                       <ion-col>
-                          <img src="assets/imgs/money3.png"  class="money">
-                          <p>法律服务</p>    
-                        </ion-col>
-                        <ion-col>
-                            
-                       </ion-col>
-                    </ion-row>
-                 </ion-grid>
-               </ion-slide>
-            </ion-slides>         
-       </ion-list>
-       <ion-list *ngSwitchCase="'service'">
-         
-          <ion-grid>
-              <ion-row>
-                  <ion-col >
-                    <img src="assets/imgs/money.png" class="money2">
-                    <p>资产包收购</p>     
-                  </ion-col>
-                  <ion-col >
-                      <img src="assets/imgs/money2.png" class="money2">
-                      <p>催收机构</p>    
-                 </ion-col>
-                 <ion-col  >
-                    <img src="assets/imgs/money3.png"  class="money2">
-                    <p>律师事务所</p>    
-                  </ion-col>
-                  <ion-col>
-                      <img src="assets/imgs/money4.png"  class="money2">
-                      <p>保理公司</p>    
-                  </ion-col>
-
-              </ion-row>
-              <ion-row>
-                  <ion-col >
-                  
-                    <img src="assets/imgs/money5.png" class="money2">
-                    
-                    <p>资金过桥</p>    
-                  </ion-col>
-                  <ion-col >
-                      <img src="assets/imgs/money6.png" class="money2">
-                      <p>投资贷款</p>    
-                 </ion-col>
-                 <ion-col  >
-                    <img src="assets/imgs/money3.png"  class="money2">
-                    <p>固产收购</p>    
-                  </ion-col>
-                  <ion-col>
-                      <img src="assets/imgs/search2.png"  class="money2">
-                      <p>尽职调查</p>    
-                  </ion-col>
-
-              </ion-row>
-
-           </ion-grid>
-             
-      </ion-list>
-    </div>
-    
-    <div>
-        <img src="assets/imgs/infor.png" class="infor">
-        <span class="bb">优质信息</span>
-    </div>
-   <!-- 上拉加载ion-infinite-scroll -->
-   <ion-list>
-      <ion-item *ngFor="let i of items">
-         
-              <div class="ee">
-                  <h3>资产包转让&nbsp;&nbsp;<span class="cc">--FB001</span></h3>
-              </div>
-              <div class="dd">
-                   <div class="ff">
-                       <img src="assets/imgs/money2.png" class="im" >
-                   </div>   
-                   <div class="hh">
-                      <p>地区:&nbsp;<span class="gg">北京</span></p>
-                      <p>来源:&nbsp;<span class="gg">银行</span></p>
-                      <p>资产包类型:&nbsp;<span class="gg">抵押</span></p>
-                    </div>
-                    <div class="hh">
-                         <p class="pp">500万</p>
-                         <p>总金额</p>
-                    </div> 
-                    <div class="hh">
-                        <p class="pp">300万</p>
-                        <p>转让价</p>
-                   </div> 
-                   <div class="ah">
-                      <ion-icon name="arrow-forward"></ion-icon>
-                  </div>    
-              </div>      
-                  
-      </ion-item>
-    </ion-list>
-   
-    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-      <ion-infinite-scroll-content></ion-infinite-scroll-content>
-    </ion-infinite-scroll>
+    <ion-item>
+      <ion-label>登录账户</ion-label>
+      <ion-input type="text" [(ngModel)]="log" ></ion-input>
+    </ion-item>
   
-       
-       
-       
+    <ion-item>
+      <ion-label>登录密码</ion-label>
+      <ion-input type="password" [(ngModel)]="pas"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button   class="log  ion-button large" (click)="logg()" >登录</button>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
 
-  </ion-content>
 
 
 
+
+
+
+
+
+
+
+
+
+   
+  
