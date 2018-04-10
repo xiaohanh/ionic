@@ -1,0 +1,38 @@
+<!-- 顶部 -->
+<ion-header no-border>
+  <ion-navbar color="yel" >
+      <ion-buttons start>
+          <!-- <button ion-button icon only color="royal">
+            <ion-icon name="arrow-back"></ion-icon>
+          </button> -->
+      </ion-buttons>
+      <ion-title> 登录</ion-title>
+    
+  </ion-navbar>   
+</ion-header>
+
+<!-- 主体 -->
+<ion-content padding>
+    <div class="logo">
+      <img src="assets/imgs/logo.png" class="logo1">
+    </div>
+
+    <ion-list >
+
+      <ion-item>
+          <ion-icon  item-start name="person" class="person"  color="yel"></ion-icon>
+          <ion-input type="text" [(ngModel)]="userid" placeholder="请输入手机号"></ion-input>
+      </ion-item>
+  
+     <ion-item>
+        <ion-icon item-start name="lock"  class="person"  color="yel"></ion-icon>
+        <ion-input type="password" [(ngModel)]="pas" placeholder="请输入密码"></ion-input>
+     </ion-item> 
+    
+   
+   </ion-list>
+   <button ion-button round  full  class="btn" (click)="login()">登录</button>
+   <p></p>
+   <button ion-button round  full class="btn" (click)="register()">注册</button>
+   <p class="pas" (click)="password()" >忘记密码?</p>
+</ion-content>

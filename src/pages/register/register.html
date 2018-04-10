@@ -1,0 +1,65 @@
+<!-- 顶部 -->
+<ion-header no-border>
+    <ion-navbar color="yel" >
+        <ion-buttons start>
+            <!-- <button ion-button icon only color="royal">
+              <ion-icon name="arrow-back"></ion-icon>
+            </button> -->
+        </ion-buttons>
+        <ion-title> 手机注册</ion-title>
+      
+    </ion-navbar>   
+  </ion-header>
+  
+  <!-- 主体 -->
+  <ion-content padding>
+      <div class="logo">
+        <img src="assets/imgs/logo.png" class="logo1">
+      </div>
+  
+      <ion-list >
+  
+        <ion-item>
+             <ion-label>
+                <ion-icon  item-start name="person" class="person" color="yel"></ion-icon>
+              </ion-label>
+            <ion-input type="text" [(ngModel)]="userid" placeholder="请输入手机号" (blur)="user()"></ion-input>
+        </ion-item>
+       
+        <ion-item>
+          
+            <ion-label>
+                <ion-icon item-start name="mail"  class="person"  color="yel"></ion-icon>
+            </ion-label>
+            <ion-input type="password" [(ngModel)]="mes" placeholder="请输入验证码"></ion-input>
+            <!-- <button ion-buttn round> 获取验证码</button> -->
+         </ion-item>  
+       <ion-item>
+          <ion-label>
+              <ion-icon item-start name="lock"  class="person"  color="yel"></ion-icon>
+          </ion-label>    
+          <ion-input type="password" [(ngModel)]="pas" placeholder="请输入密码" (blur)="pass()"></ion-input>
+       </ion-item> 
+       <ion-item>
+          <ion-label>
+               <ion-icon item-start name="lock"  class="person"  color="yel"></ion-icon>
+        </ion-label>
+          <ion-input type="password" [(ngModel)]="rpas" placeholder="请再次输入密码" (blur)="rpass()"></ion-input>
+       </ion-item> 
+      
+     
+     </ion-list>
+
+   
+     <button ion-button round  full class="btn" (click)="register()">注册</button>
+     <ion-item no-lines>  
+        <ion-label>已经阅读并同意  
+        </ion-label>
+      
+        <ion-checkbox [(ngModel)]="yue" ></ion-checkbox>
+      
+      </ion-item> 
+      
+      <span color="yel" (click)="agree()" >《资芽网注册协议》</span>
+
+  </ion-content>
